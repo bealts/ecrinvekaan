@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecrin & Kaan - Anılarımız</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('attachments/photo_2026-07-23_06-46-18.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gallery-img {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .heart {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .photo-frame {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-rose-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-heart text-rose-500 text-2xl"></i>
+                <span class="heading-font text-2xl font-bold tracking-tight">Ecrin & Kaan</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#hero" class="hover:text-rose-500 transition-colors">Ana Sayfa</a>
+                <a href="#gallery" class="hover:text-rose-500 transition-colors">Anılar</a>
+                <a href="#moments" class="hover:text-rose-500 transition-colors">Özel Anlar</a>
+                <a href="#future" class="hover:text-rose-500 transition-colors">Gelecek</a>
+            </div>
+            <div class="text-xs text-rose-400 font-light">23.07.2026</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-bg h-screen flex items-center justify-center text-white relative">
+        <div class="text-center z-10 px-6">
+            <div class="mb-6 inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-6 py-2 rounded-full text-sm">
+                <i class="fa-solid fa-infinity"></i>
+                <span>Sonsuza Dek</span>
+            </div>
+            <h1 class="heading-font text-7xl md:text-8xl font-bold tracking-tighter mb-4">Ecrin &amp; Kaan</h1>
+            <p class="text-xl md:text-2xl max-w-md mx-auto opacity-90">Birlikte yazdığımız en güzel hikaye</p>
+            
+            <div class="mt-16 flex justify-center">
+                <a href="#gallery" 
+                   class="inline-flex items-center gap-3 bg-white text-rose-600 hover:bg-rose-50 px-8 py-4 rounded-2xl font-medium transition-all active:scale-95">
+                    Anılarımıza Göz At
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <i class="fa-solid fa-chevron-down text-3xl"></i>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 mb-6 text-rose-400">
+                <div class="h-px w-12 bg-rose-300"></div>
+                <i class="fa-solid fa-heart heart text-xl"></i>
+                <div class="h-px w-12 bg-rose-300"></div>
+            </div>
+            <h2 class="heading-font text-5xl font-semibold mb-6">Bizim Hikayemiz</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                Her bakışta, her gülüşte, her dokunuşta büyüyen bir aşk. 
+                Bu site, bizim küçük mutluluklarımızı, paylaştığımız anları ölümsüzleştirmek için yapıldı.
+            </p>
+            <div class="mt-10 flex justify-center gap-8 text-sm">
+                <div>
+                    <div class="font-mono text-3xl font-light text-rose-400">∞</div>
+                    <div class="text-gray-500">Birlikte</div>
+                </div>
+                <div>
+                    <div class="font-mono text-3xl font-light text-rose-400">❤️</div>
+                    <div class="text-gray-500">Aşk</div>
+                </div>
+                <div>
+                    <div class="font-mono text-3xl font-light text-rose-400">✨</div>
+                    <div class="text-gray-500">Anılar</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-20 bg-rose-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-end justify-between mb-12">
+                <div>
+                    <span class="uppercase tracking-widest text-rose-400 text-sm font-medium">Galeri</span>
+                    <h2 class="heading-font text-5xl font-semibold">Paylaştığımız Güzellikler</h2>
+                </div>
+                <a href="#" onclick="alert('Daha fazla fotoğraf eklenecek ❤️')" 
+                   class="text-rose-500 hover:text-rose-600 flex items-center gap-2 text-sm font-medium">
+                    Daha Fazla <i class="fa-solid fa-plus"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Photo 1 -->
+                <div class="group photo-frame bg-white rounded-3xl overflow-hidden">
+                    <img src="attachments/photo_2026-07-23_06-46-18.jpg" 
+                         alt="Ecrin ve Kaan" 
+                         class="gallery-img w-full h-80 object-cover">
+                    <div class="p-6">
+                        <p class="text-sm text-gray-500">İlk selfie la</p>
+                        <p class="text-rose-400 text-xs mt-1">Temmuz 2026</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 2 -->
+                <div class="group photo-frame bg-white rounded-3xl overflow-hidden">
+                    <img src="attachments/photo_2026-07-23_06-46-15.jpg" 
+                         alt="Ecrin ve Kaan" 
+                         class="gallery-img w-full h-80 object-cover">
+                    <div class="p-6">
+                        <p class="text-sm text-gray-500">valla yiyesim geldi seni</p>
+                        <p class="text-rose-400 text-xs mt-1">Temmuz 2026</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 3 -->
+                <div class="group photo-frame bg-white rounded-3xl overflow-hidden">
+                    <img src="attachments/photo_2026-07-23_06-46-16.jpg" 
+                         alt="Ecrin ve Kaan" 
+                         class="gallery-img w-full h-80 object-cover">
+                    <div class="p-6">
+                        <p class="text-sm text-gray-500">kudurduk fotoğraf çekemiyoz diye</p>
+                        <p class="text-rose-400 text-xs mt-1">Temmuz 2026</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 4 -->
+                <div class="group photo-frame bg-white rounded-3xl overflow-hidden">
+                    <img src="attachments/photo_2026-07-23_07-15-40.jpg" 
+                         alt="Sanat eserleri" 
+                         class="gallery-img w-full h-80 object-cover">
+                    <div class="p-6">
+                        <p class="text-sm text-gray-500">aldığım en değerli hediye</p>
+                        <p class="text-rose-400 text-xs mt-1">Temmuz 2026</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 5 -->
+                <div class="group photo-frame bg-white rounded-3xl overflow-hidden">
+                    <img src="attachments/photo_2026-07-23_07-15-08.jpg" 
+                         alt="Güller" 
+                         class="gallery-img w-full h-80 object-cover">
+                    <div class="p-6">
+                        <p class="text-sm text-gray-500">senden güzel olmasada sana aldığım çiçekler</p>
+                        <p class="text-rose-400 text-xs mt-1">Temmuz 2026</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 6 -->
+                <div class="group photo-frame bg-white rounded-3xl overflow-hidden">
+                    <img src="attachments/photo_2026-07-23_06-46-17.jpg" 
+                         alt="Boyama" 
+                         class="gallery-img w-full h-80 object-cover">
+                    <div class="p-6">
+                        <p class="text-sm text-gray-500">picassonun bizden ders alması gerek mesela</p>
+                        <p class="text-rose-400 text-xs mt-1">Temmuz 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Moments -->
+    <section id="moments" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-5xl font-semibold">Özel Anlar</h2>
+                <p class="text-gray-500 mt-3">Kalplerimizi ısıtan detaylar</p>
+            </div>
+            
+            <div class="space-y-16">
+                <!-- Moment 1 -->
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                    <div class="order-2 md:order-1">
+                        <img src="attachments/photo_2026-07-23_07-33-12.jpg" 
+                             alt="Boyama Anısı" 
+                             class="rounded-3xl shadow-xl w-full">
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <div class="max-w-md">
+                            <div class="uppercase text-rose-400 text-xs tracking-widest mb-3">BİRLİKTE DOLDURCAZ BURALARI</div>
+                            <h3 class="heading-font text-4xl font-medium leading-tight mb-6">seni çok seviyom</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                ne koycaz acaba buraya çok merak ediyom
+                            </p>
+                            <div class="mt-8 flex gap-4">
+                                <div class="px-5 py-2 bg-rose-100 text-rose-600 rounded-2xl text-sm">❤️</div>
+                                <div class="px-5 py-2 bg-rose-100 text-rose-600 rounded-2xl text-sm">🎨</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Moment 2 -->
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <img src="attachments/photo_2026-07-23_07-33-12.jpg" 
+                             alt="Gül Anısı" 
+                             class="rounded-3xl shadow-xl w-full">
+                    </div>
+                    <div>
+                        <div class="max-w-md">
+                            <div class="uppercase text-rose-400 text-xs tracking-widest mb-3">BURASIDA BOŞ</div>
+                            <h3 class="heading-font text-4xl font-medium leading-tight mb-6">burayıda doldurcaz</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                bi buluşakta doldururuz önemli değil
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future / Placeholders -->
+    <section id="future" class="py-20 bg-rose-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="heading-font text-5xl font-semibold">Gelecek Anılarımız</h2>
+                <p class="mt-4 text-gray-500">Daha nice fotoğraflarla dolacak burası</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Placeholder 1 -->
+                <div class="bg-white rounded-3xl p-8 text-center border border-dashed border-rose-200 hover:border-rose-300 transition-colors min-h-[380px] flex flex-col items-center justify-center">
+                    <div class="w-20 h-20 rounded-2xl bg-rose-100 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-camera text-4xl text-rose-300"></i>
+                    </div>
+                    <h4 class="font-medium text-xl mb-2">Yeni Macera</h4>
+                    <p class="text-gray-500">Birlikte keşfedeceğimiz yerler</p>
+                    <div class="mt-auto pt-8 text-xs text-rose-300">Yakında eklenecek...</div>
+                </div>
+                
+                <!-- Placeholder 2 -->
+                <div class="bg-white rounded-3xl p-8 text-center border border-dashed border-rose-200 hover:border-rose-300 transition-colors min-h-[380px] flex flex-col items-center justify-center">
+                    <div class="w-20 h-20 rounded-2xl bg-rose-100 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-heart text-4xl text-rose-300"></i>
+                    </div>
+                    <h4 class="font-medium text-xl mb-2">Özel Günler</h4>
+                    <p class="text-gray-500">Doğum günleri, yıl dönümleri</p>
+                    <div class="mt-auto pt-8 text-xs text-rose-300">Yakında eklenecek...</div>
+                </div>
+                
+                <!-- Placeholder 3 -->
+                <div class="bg-white rounded-3xl p-8 text-center border border-dashed border-rose-200 hover:border-rose-300 transition-colors min-h-[380px] flex flex-col items-center justify-center">
+                    <div class="w-20 h-20 rounded-2xl bg-rose-100 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-plane text-4xl text-rose-300"></i>
+                    </div>
+                    <h4 class="font-medium text-xl mb-2">Tatil Anıları</h4>
+                    <p class="text-gray-500">Deniz, kum, güneş...</p>
+                    <div class="mt-auto pt-8 text-xs text-rose-300">Yakında eklenecek...</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-heart text-rose-500 text-3xl"></i>
+                    <div>
+                        <div class="heading-font text-2xl">Ecrin &amp; Kaan</div>
+                        <div class="text-xs text-gray-400">Sonsuza kadar</div>
+                    </div>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-sm text-gray-400">Made with love &amp; HTML</p>
+                    <p class="text-xs text-gray-500 mt-2">Tüm fotoğraflar saklıdır ❤️</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already included via CDN
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Simple confetti on load for fun
+        function launchConfetti() {
+            const colors = ['#f43f5e', '#e11d48', '#fda4af'];
+            for (let i = 0; i < 60; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.style.position = 'fixed';
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.top = '-10px';
+                    confetti.style.width = '8px';
+                    confetti.style.height = '8px';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.borderRadius = '50%';
+                    confetti.style.zIndex = '9999';
+                    confetti.style.opacity = '0.9';
+                    document.body.appendChild(confetti);
+                    
+                    let y = -10;
+                    const speed = Math.random() * 8 + 6;
+                    
+                    const fall = setInterval(() => {
+                        y += speed;
+                        confetti.style.top = y + 'px';
+                        confetti.style.transform = `rotate(${y * 4}deg)`;
+                        
+                        if (y > window.innerHeight) {
+                            clearInterval(fall);
+                            confetti.remove();
+                        }
+                    }, 16);
+                }, Math.random() * 800);
+            }
+        }
+        
+        window.onload = () => {
+            setTimeout(launchConfetti, 1200);
+        };
+    </script>
+</body>
+</html>
